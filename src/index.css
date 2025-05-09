@@ -1,0 +1,161 @@
+/* Genel CSS Sıfırlama ve Genel Stiller */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', Oxygen, Ubuntu, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e213a, #0f1021);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ana uygulama konteyneri */
+.countdown-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: rgba(30, 33, 58, 0.8);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Başlıklar */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 32px;
+  color: #c8c9ef;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #a4a6d4;
+}
+
+/* Tarih seçim alanı */
+.date-selection {
+  margin-bottom: 40px;
+}
+
+.inputs {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 200px;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #a4a6d4;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 2px solid #464978;
+  background-color: #2e3151;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.selected-date {
+  font-size: 1.1rem;
+  color: #c8c9ef;
+  margin-top: 16px;
+}
+
+/* Geri sayım alanı */
+.countdown {
+  display: flex;
+  gap: 16px;
+  margin: 32px 0;
+  justify-content: center;
+}
+
+.countdown-item {
+  min-width: 110px;
+  padding: 16px;
+  background-color: #4f46e5;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+.countdown-value {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-label {
+  font-size: 1rem;
+  color: #c7d2fe;
+  margin-top: 8px;
+}
+
+/* Footer */
+footer {
+  margin-top: 32px;
+  font-size: 1rem;
+  color: #a4a6d4;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+  .countdown-container {
+    padding: 24px 16px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  .inputs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .countdown {
+    flex-wrap: wrap;
+  }
+  
+  .countdown-item {
+    min-width: 90px;
+  }
+  
+  .countdown-value {
+    font-size: 2.5rem;
+  }
+}
